@@ -2,7 +2,7 @@
     position: relative;
 }
 .conteiner{
-  background-color: var(--tres-text);
+  
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -100,6 +100,7 @@ background-color: transparent;
   
   }
   .menu__conteiner.is-open{
+    background-color: #fff;
     display: block;
   }
   .network__item{
@@ -128,8 +129,57 @@ background-color: transparent;
   
   color:#2196F3;
   }
+  
   .navigation__item{
     margin-bottom: 32px;
   }
-  
-  
+  .navigation__list{
+    @media screen and (max-width: 480px){ 
+    margin-bottom: 302px;}
+  }
+  .contact__linktel{
+    @media screen and (max-width: 480px){ 
+      margin-bottom: 32px;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: #2196F3;
+    }
+  }
+  .contact__link{
+    @media screen and (max-width: 480px){ 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-bottom: 64px;
+  }
+}
+.network__link{
+  margin-top: 64px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+.contact__svg{
+  @media screen and (max-width: 480px){ 
+    
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+}
