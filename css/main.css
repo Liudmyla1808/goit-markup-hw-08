@@ -47,26 +47,50 @@ button {
 .page-header {
   position: relative;
 }
+@media screen and (min-width: 1190px) {
+  .page-header {
+    border-bottom: 1px solid #ececec;
+  }
+}
 
-.conteiner {
+.conteiner-header {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  .conteiner {
+  .conteiner-header {
     width: 480px;
   }
 }
-@media screen and (min-width: 768px) {
-  .conteiner {
+@media screen and (min-width: 767px) {
+  .conteiner-header {
     width: 768px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-@media screen and (min-width: 1200px) {
-  .conteiner {
+@media screen and (min-width: 1190px) {
+  .conteiner-header {
     width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -81,6 +105,19 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 60px;
+}
+@media screen and (min-width: 767px) {
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .navigation__logo {
@@ -168,6 +205,11 @@ button {
 
 @media screen and (min-width: 767px) {
   .contact {
+    display: block;
+  }
+}
+@media screen and (max-width: 1190) {
+  .contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -218,9 +260,52 @@ button {
   letter-spacing: 0.02em;
   color: #2196F3;
 }
+@media screen and (min-width: 767px) {
+  .navigation__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--title-text-color);
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link--current {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    color: var(--accent-color);
+    font-family: "Roboto";
+    font-weight: 500;
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: var(--accent-color);
+  }
+  .navigation__link--current::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+  }
+}
 
 .navigation__item {
   margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .navigation__item {
+    margin-left: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -228,8 +313,22 @@ button {
     margin-bottom: 302px;
   }
 }
+@media screen and (max-width: 767px) {
+  .navigation__list {
+    margin-left: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .contact__linktel {
     margin-bottom: 32px;
     font-weight: 500;
@@ -239,8 +338,18 @@ button {
     color: #2196F3;
   }
 }
+@media screen and (min-width: 766px) {
+  .contact__linktel {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-bottom: 10px;
+  }
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .contact__link {
     font-weight: 500;
     font-size: 24px;
@@ -248,6 +357,15 @@ button {
     letter-spacing: 0.02em;
     color: #757575;
     margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 766px) {
+  .contact__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #757575;
   }
 }
 
